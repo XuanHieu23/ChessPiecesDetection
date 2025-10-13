@@ -33,7 +33,7 @@ augment_chess_image(image, bboxes) - Augmentation cho ảnh cờ vua
 apply_chess_specific_augmentations() - Augmentation đặc thù (xoay bàn cờ, thay đổi lighting)
 generate_chess_training_pairs() - Tạo cặp ảnh training
 
-VISUALIZATION MODULES
+3. VISUALIZATION MODULES
 File: src/visualization/chess_drawer.py 
 -Functions:
 draw_chess_detections(image, detections) - Vẽ bounding boxes lên ẢNH
@@ -46,7 +46,7 @@ display_chess_detection_result(image, detections) - Hiển thị kết quả det
 save_annotated_image(image, output_path, detections) - Lưu ảnh đã annotated
 create_chess_detection_report_image(detections) - Tạo ảnh báo cáo kết quả
 
-3. UTILITIES MODULES 
+4. UTILITIES MODULES 
 File: src/utils/chess_metrics.py 
 -Functions:
 calculate_image_detection_metrics(detections, ground_truth) - Tính metrics cho ảnh
@@ -65,7 +65,7 @@ convert_detections_to_csv(detections, image_id) - Xuất kết quả sang CSV
 save_detection_results(detections, output_path) - Lưu kết quả detection
 load_image_with_metadata(image_path) - Load ảnh với metadata
 
-3. TRAINING MODULES 
+5. TRAINING MODULES 
 File: src/training/chess_trainer.py 
 -Functions:
 setup_chess_training_config() - Cấu hình training cho chess
@@ -79,14 +79,14 @@ evaluate_trained_model(model_path, test_loader) - Đánh giá model đã train
 plot_training_curves(history) - Vẽ đồ thị training
 compare_chess_models(model1, model2) - So sánh các model
 
-4. MAIN EXECUTION FOR IMAGE
+6. MAIN EXECUTION FOR IMAGE
 File: src/chess_image_main.py 
 -Functions:
 process_single_chess_image(image_path) - Xử lý ảnh đơn
 process_chess_image_batch(image_dir) - Xử lý batch ảnh
 train_chess_detection_model() - Training model từ dataset
 
-5. CONFIG
+7. CONFIG
 File: configs/chess_config.yaml- chứa tất cả cấu hình cho dự án, bao gồm đường dẫn, tham số model, tham số training, v.v.
 
 -------------GIẢI THÍCH THUẬT NGỮ----------------
