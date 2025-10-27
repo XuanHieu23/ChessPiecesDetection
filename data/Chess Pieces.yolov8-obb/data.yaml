@@ -1,4 +1,4 @@
-path: ../datasets/roboflow
+path:  ../data/Chess Pieces.yolov8-obb
 
 train: train/images
 val: valid/images
