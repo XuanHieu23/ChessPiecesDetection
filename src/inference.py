@@ -25,21 +25,20 @@ def draw_boxes(img, boxes, names):
 
 def main(args):
     model = YOLO(args.model)
-    names = [
-     "w_king","w_queen","w_rook","w_bishop","w_knight","w_pawn",
-     "b_king","b_queen","b_rook","b_bishop","b_knight","b_pawn"
-    ]
+    names = model.model.names  # lấy tên lớp trực tiếp từ model
+
     os.makedirs(args.output, exist_ok=True)
 
     sources = []
     if os.path.isdir(args.source):
         for f in os.listdir(args.source):
-            if f.lower().endswith((".jpg",".jpeg",".png")):
+            if f.lower().endswith((".jpg", ".jpeg", ".png")):
                 sources.append(os.path.join(args.source, f))
     elif os.path.isfile(args.source):
         sources = [args.source]
     else:
         raise FileNotFoundError(args.source)
+
 
     for src in sources:
         res = model.predict(source=src, imgsz=args.imgsz, conf=args.conf, iou=0.45, device=args.device)
