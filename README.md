@@ -46,7 +46,7 @@ python train_model.py --data data.yaml --model yolov8n.pt --epochs 10 --imgsz 64
 
 ### 2. Inference (Detection)
 
-#### Method 1: Custom Script (`inference.py`)
+#### Method : Custom Script (`inference.py`)
 
 This script provides custom visualization and saves the output images to a folder.
 
