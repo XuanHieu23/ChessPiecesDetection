@@ -1,11 +1,3 @@
-"""
-inference.py
-Run inference with a trained YOLOv8 model and save visualized result images.
-
-Usage:
-    python inference.py --model runs/detect/chess_nano/weights/best.pt --source test_images --output preds --imgsz 1024 --conf 0.35
-"""
-
 import os
 import argparse
 import cv2
